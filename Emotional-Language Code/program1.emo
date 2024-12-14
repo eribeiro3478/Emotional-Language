@@ -1,0 +1,74 @@
+
+share("Welcome to Emotional Language!")
+mood a = 8
+mood b = 20
+mood c = 5
+mood d = True
+mood e = 7.7
+mood f = a + b * 2
+mood g = (a + b) * 2
+share(a)
+share(b)
+share(c)
+share(d)
+share(e)
+share(f)
+share(g)
+mood h = f + g
+share(h)
+
+if a < b
+    share("a is less than b")
+    mood x = a + b
+    share(x)
+end
+
+if c == 5
+    share("c is 5")
+end
+
+if d == True
+    share("d is True")
+end
+
+if e > 5
+    share("e is greater than 5")
+end
+
+if e < 5
+    share("e is less than 5")
+end
+
+if a > b
+    share("This should not share because a is not greater than b")
+end
+
+if a == b
+    share("This should not share because a is not equal to b")
+end
+
+#endure (while) loop
+mood counter = 0
+endure counter < 5
+    share("This is a endure (while) loop, Counter is:")
+    share(counter)
+    mood counter = counter + 1
+end
+
+share("Finished endure loop")
+
+#persevere (for) loop
+persevere i = 1 to 5
+    share("i in persevere (for) loop:")
+    share(i)
+end
+
+share("Finished persevere loop")
+
+# Test persevere loop with step
+persevere j = 0 to 20 step 4
+    share("j in persevere (for) loop with step:")
+    share(j)
+end
+
+share("Finished persevere loop with step")
